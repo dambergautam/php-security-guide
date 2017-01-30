@@ -4,68 +4,15 @@
 
 This document will list possible security threats to the Web application, explanation and preventive measures.
 
-1. SQL injection
-2. File Upload
-3. Session Hijacking and Session fixation
-4. Remote file inclusion
-5. XSS
-6. eval()
-7. Sea-surf Attack (CSRF)
-8. Clickjacking
+1. [SQL injection](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/sql_injection.md)
+2. [File Upload](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/file_upload.md)
+3. [Session Hijacking and Session fixation](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/session_hijacking_fixation.md)
+4. [Remote file inclusion](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/remote_file_inclusion.md)
+5. [XSS](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/xss.md)
+6. [eval()](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/eval.md)
+7. [Sea-surf Attack (CSRF)](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/csrf.md)
+8. [Clickjacking](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/clickjacking.md)
 
-***
-### 1. SQL injection
-
-It is a vulnerability in the database layer of a PHP application. When user input is incorrectly filtered any SQL statements can be executed by the application. You can configure Apache and write secure code (validating and escaping all user input) to avoid SQL injection attacks. A common practice in PHP is to escape parameters using the function called `mysql_real_escape_string()` before sending the SQL query.
-
-### 2. File Upload
-
-It allows your visitor to place files (upload files) on your server. This can result in various security problems such as delete your files, delete a database, get user details and much more. You can disable file uploads using PHP or write secure code (like validating user input and only allow image file types such as png or gif).
-
-### 3. Session Hijacking and Session fixation
-
-#### Explanation
-
-#### Solution
-
-**Secure Session tips**
-
-- Set `session.use_trans_sid = 0` in /etc/php5/apache2/php.ini file.
-- Ensure you always use a new self-generated session id on successful login attempt.
-- Try setting `session.use_only_cookies = 1` and check if all works fine.
-- Use https throughout to ensure no one can sniff your session id.
-- Store session id, remote IP information and compare for successive pages
-
-**Enable session strict mode `session.use_strict_mode = 1` from php.ini?**
-
-- It will help to prevent, and uninitialized session id and session fixation
-- It will regenerate session ID
-- By default it is disabled, it is encouraged to enable.
-
-**Why to set `session.use_trans_sid = 0`?**
-
-- Setting 1, it will allow passing PHPSESSID in URL
-- Setting 0, it will help to prevent session fixation
-
-### 4. Remote file inclusion
-
-An attacker can open files from remote server and execute any PHP code. This allows them to upload a file, delete a file and install backdoors. You can configure PHP to disable remote file execution.
-
-### 5. XSS
-
-Cross-site scripting is a vulnerability in PHP web applications, which attackers may exploit to steal users&#39; information. You can configure Apache and write more secure PHP scripts (validating all user input) to avoid XSS attacks.
-
-### 6. eval()
-
-Evaluate a string as PHP code. This is often used by an attacker to hide their code and tools on the server itself. You can configure PHP to disable `eval()`.
-
-### 7. Sea-surf Attack (CSRF)
-
-This attack forces an end user to execute unwanted actions on a web application in which he/she is currently authenticated. A successful CSRF exploit can compromise end user data and operation in case of normal user. If the targeted end user is the administrator account, this can compromise the entire web application.
-
-### 8. Clickjacking
-
-***
 
 ## How to know if a site is Vulnerable?
 
