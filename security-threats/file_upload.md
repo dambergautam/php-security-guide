@@ -30,7 +30,7 @@ It allows your visitor to place files (upload files) on your server. This can re
     
     Since, it is out of scope to access from URL we need to create either symlinks or alias from apache virtual host file. Moreover, we can add additional access restrictions like setting only valid file type to be accessible and preventing files access directly via URL in particular image directory.
 
-    ** Apache virtual host file ** 
+    **Apache virtual host file** 
 
     ```php
     Alias /images /opt/fellowship/images
@@ -51,7 +51,7 @@ It allows your visitor to place files (upload files) on your server. This can re
     </Directory>
     ```
 
-    ** Usage fellowship/app/index.php **
+    **Usage fellowship/app/index.php**
     
     ```html
     <img src="/images/banner.png" />
