@@ -12,7 +12,7 @@ This document will list possible security threats to the Web application, explan
 6. [eval()](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/eval.md)
 7. [Sea-surf Attack (CSRF)](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/csrf.md)
 8. [Clickjacking](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/clickjacking.md)
-
+9. [Parameter Tempering](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/parameter_tempering.md)
 
 ## How to know if a site is Vulnerable?
 
