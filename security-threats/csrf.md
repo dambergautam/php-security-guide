@@ -52,7 +52,7 @@ There are two methods that I prefer:
 			//Invalid request
 		} 
 		
-		if (!validateCsrfToken($$_POST['CSRFName'], $$_POST['CSRFToken']))
+		if (!validateCsrfToken($_POST['CSRFName'], $_POST['CSRFToken']))
 		{ 
 			//Invalid CSRF token
 		}
@@ -75,3 +75,34 @@ There are two methods that I prefer:
 
   This method will generate random form field name and stored as an array where array key will be the field name and value will be new random name for the field. 
 
+  ```php
+   function form_names($names, $regenerate) {
+ 
+        $values = array();
+        foreach ($names as $n) {
+                if($regenerate == true) {
+                        unset($_SESSION[$n]);
+                }
+                $s = isset($_SESSION[$n]) ? $_SESSION[$n] : $this->randomStr(10);
+                $_SESSION[$n] = $s;
+                $values[$n] = $s;       
+        }
+        return $values;
+  }
+
+  function randomStr($chars = 8) {
+   	$letters = 'abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   	return substr(str_shuffle($letters), 0, $chars);
+  }
+
+  // Generate Random Form Names
+  $form_names = form_names(array('user', 'password'), false);
+  ```
+
+  ```html
+  <form action="index.php" method="post">
+	<input type="text" name="<?php $form_names['user']; ?>" /><br/>
+	<input type="text" name="<?php $form_names['password']; ?>" />
+	<input type="submit" value="Login"/>
+  </form>
+  ```
