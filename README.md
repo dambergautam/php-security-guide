@@ -10,7 +10,7 @@ This document will list possible security threats to the Web application, explan
 4. [Remote file inclusion](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/remote_file_inclusion.md)
 5. [XSS](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/xss.md)
 6. [eval()](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/eval.md)
-7. [Sea-surf Attack (CSRF)](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/csrf.md)
+7. [Cross-Site Request Forgery (CSRF)](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/csrf.md)
 8. [Clickjacking](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/clickjacking.md)
 9. [Parameter Tempering](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/parameter_tempering.md)
 
