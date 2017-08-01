@@ -4,15 +4,17 @@
 
 This document will list possible security threats to the Web application, explanation and preventive measures.
 
-1. [SQL injection](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/sql_injection.md)
-2. [File Upload](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/file_upload.md)
-3. [Session Hijacking and Session fixation](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/session_hijacking_fixation.md)
-4. [Remote file inclusion](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/remote_file_inclusion.md)
-5. [XSS](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/xss.md)
-6. [eval()](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/eval.md)
-7. [Cross-Site Request Forgery (CSRF)](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/csrf.md)
-8. [Clickjacking](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/clickjacking.md)
-9. [Parameter Tempering](https://github.com/dambergautam/php-security-guide/blob/master/security-threats/parameter_tempering.md)
+1. [Footprinting](reconnaissance/footprinting.md)
+1. [Scanning](reconnaissance/scanning.md)
+1. [SQL injection](security-threats/sql_injection.md)
+2. [File Upload](security-threats/file_upload.md)
+3. [Session Hijacking and Session fixation](security-threats/session_hijacking_fixation.md)
+4. [Remote file inclusion](security-threats/remote_file_inclusion.md)
+5. [XSS](security-threats/xss.md)
+6. [eval()](security-threats/eval.md)
+7. [Cross-Site Request Forgery (CSRF)](security-threats/csrf.md)
+8. [Clickjacking](security-threats/clickjacking.md)
+9. [Parameter Tempering](security-threats/parameter_tempering.md)
 
 ## How to know if a site is Vulnerable?
 
