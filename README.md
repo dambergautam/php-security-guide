@@ -56,7 +56,7 @@ To prevent this follow all preventive measure and search for those script in you
 ## Resources
 
 [![OWASP](https://www.owasp.org/images/thumb/f/fe/Owasp_logo.jpg/300px-Owasp_logo.jpg)](https://owasp.org) <br />
-Follow **OWASP** secure coding practices and their checklist for testing for any vulnerabilities ( [https://www/owasp.org](https://www/owasp.org)).
+Follow **OWASP** secure coding practices and their checklist for testing for any vulnerabilities ( [https://www.owasp.org](https://www.owasp.org)).
 
 <br />
 <br/>
